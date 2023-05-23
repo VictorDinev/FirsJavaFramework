@@ -9,8 +9,8 @@ import java.util.concurrent.TimeUnit;
 
 public class TestDriver {
 
-    private static String baseUrl = "https://www.xm.com/";
-    private static String projectPath = System.getProperty("user.dir");
+    private static final String baseUrl = "https://www.xm.com/";
+    private static final String projectPath = System.getProperty("user.dir");
     static WebDriver driver = null;
 
     private static Actions actions;
@@ -30,8 +30,8 @@ public class TestDriver {
         if (driver == null) {
             System.setProperty("Webdriver.chrome.driver", projectPath + "/src/test/java/Drivers/chromedriver.exe");
             driver = new ChromeDriver();
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
             driver.get(baseUrl);
         }
         return driver;

@@ -18,4 +18,9 @@ public class EconomicCalendarSteps {
     public void setCalendarToDay() {
         economicCalendar.calendarSliderManipulator();
     }
+
+    @And("I click on here link in Disclaimer section")
+    public void iClickOnHereLinkInDisclaimerSection() {
+        economicCalendar.disclaimerHereClick();
+    }
 }

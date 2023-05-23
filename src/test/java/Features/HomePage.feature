@@ -1,4 +1,4 @@
-Feature: Testing loin page
+Feature: Testing login page
 
   Scenario: XM smoke test fullscreen
     Given i set resolution to maximize
@@ -8,6 +8,10 @@ Feature: Testing loin page
     And i open economic calendar
     And i verify Calendar is visible
     And set calendar to day
+    And I click on here link in Disclaimer section
+    Then Notification risk page is displayed and text "Notification on Non-Independent Investment Research and Risk Warning" is visible;
+    When I click on here link in Risk warning section
+    Then Warning PDF document is Displayed and text "Risk Warning:" is visible
 
 
 #  Scenario: XM smoke test resolution 1024 x 768
